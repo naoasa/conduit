@@ -62,6 +62,6 @@
         </div>
       </div>
     </div>
-  <%= link_to "Create", controller: "articles", action: "create" %>
+    <%= button_to "Create", {controller: "articles", action: "create"}, {method: :get, class: "btn btn-lg btn-primary"} %>
   </div>
 </div>
