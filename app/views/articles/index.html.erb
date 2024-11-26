@@ -20,7 +20,20 @@
           </ul>
         </div>
 
-        <div class="article-preview">
+        <% @articles.each do |article| %>
+          <div class="article-preview">
+            <%= link_to "/articles/#{article.id}", class: "preview-link" do %>
+              <h1><%= article.title %></h1>
+              <p><%= article.description %></p>
+              <span>Read more...</span>
+              <ul class="tag-list">
+                <li class="tag-default tag-pill tag-outline"><%= article.tags %></li>
+              </ul>
+            <% end %>
+          </div>
+        <% end %>
+
+        <%# <div class="article-preview">
           <a href="/article/how-to-build-webapps-that-scale" class="preview-link">
             <h1>How to build webapps that scale</h1>
             <p>This is the description for the post.</p>
@@ -42,7 +55,7 @@
               <li class="tag-default tag-pill tag-outline">implementations</li>
             </ul>
           </a>
-        </div>
+        </div> %>
       </div>
 
       <div class="col-md-3">
@@ -62,6 +75,6 @@
         </div>
       </div>
     </div>
-    <%= button_to "Create", {controller: "articles", action: "create"}, {method: :get, class: "btn btn-lg btn-primary"} %>
+    <%= button_to "Create", "/create", {method: :get, class: "btn btn-lg btn-primary"} %>
   </div>
 </div>
