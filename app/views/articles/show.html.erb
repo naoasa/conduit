@@ -4,9 +4,13 @@
       <h1><%= @article.title %></h1>
 
       <div class="article-meta">
-        <button class="btn btn-sm btn-outline-secondary">
+        <%# Editボタン %>
+        <%= button_to edit_article_url, { method: :get, class: "btn btn-sm btn-outline-secondary", form: { class: "d-inline-block" } } do %> <!-- ボタンにclassを当ててCSSを適用する -->
           <i class="ion-edit"></i> Edit Article
-        </button>
+        <% end %>
+        <%# <button class="btn btn-sm btn-outline-secondary">
+          <i class="ion-edit"></i> Edit Article
+        </button> %>
         <button class="btn btn-sm btn-outline-danger">
           <i class="ion-trash-a"></i> Delete Article
         </button>
