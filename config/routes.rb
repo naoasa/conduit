@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get "/", to: "articles#home"
-  get "/create", to: "articles#create"
-  get "/:id/edit", to: "articles#edit"
-  get "/articles/:id", to: "articles#show"
+  resources :articles, only: [:index, :new, :create, :show]
+  get "/", to: "articles#index"
+  get "/create", to: "articles#new"
+  # get "/:id/edit", to: "articles#edit"
+  # get "/articles/:id", to: "articles#show"
 end
