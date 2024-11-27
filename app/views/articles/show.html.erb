@@ -12,11 +12,13 @@
           <i class="ion-edit"></i> Edit Article
         </button> %>
 
-        <%= link_to "Delete", @article, data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
-
-        <button class="btn btn-sm btn-outline-danger">
+        <%= button_to @article, method: :delete, data: { turbo_confirm: "Are you sure?"}, class: "btn btn-sm btn-outline-danger", form: { class: "d-inline-block" } do %>
           <i class="ion-trash-a"></i> Delete Article
-        </button>
+        <% end %>
+
+        <%# <button class="btn btn-sm btn-outline-danger">
+          <i class="ion-trash-a"></i> Delete Article
+        </button> %>
 
       </div>
     </div>
