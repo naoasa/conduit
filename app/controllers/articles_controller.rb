@@ -18,6 +18,17 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    # 更新がされたかの判定
+    if @article.update(article_params)
+      redirect_to articles_path, notice: "Article was successfully updated."
+    else
+      render :edit
+    end
   end
 
   # 個別記事の閲覧
