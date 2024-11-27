@@ -35,6 +35,16 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
+
+  # 記事の削除
+  def destroy
+    # 記事を特定し、変数に格納
+    @article = Article.find(params[:id])
+    # 削除
+    @article.destroy
+    # リダイレクト
+    redirect_to "/", notice: "Article was successfully deleted."
+  end
 end
 
 private
