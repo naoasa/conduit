@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to "/", notice: "Article was successfully created."
     else
-      render :new
+      render :new, status: :unprocessable_entity # エラーを表示するのに必要
     end
   end
 
@@ -27,7 +27,7 @@ class ArticlesController < ApplicationController
     if @article.update(article_params)
       redirect_to articles_path, notice: "Article was successfully updated."
     else
-      render :edit
+      render :edit, status: :unprocessable_entity # エラーを表示するのに必要
     end
   end
 
