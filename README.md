@@ -1,24 +1,3 @@
-# README
+# Conduit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+本アプリは、[ReadWorld(OSSプロジェクト)](https://github.com/gothinkster/realworld/tree/main)の[Conduit](https://demo.realworld.io/#/)を参考に、Railsで同じ見た目・機能のサイトをRailsで実装することを目的としています。
