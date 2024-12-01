@@ -1,0 +1,8 @@
+<%# ユーザー登録時のエラーのパーシャル %>
+<% if @user.errors.any? %>
+  <ul class="error-messages">
+  <% @user.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+  </ul>
+<% end %>
