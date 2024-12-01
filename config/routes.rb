@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   # get "/:id/edit", to: "articles#edit"
   # get "/articles/:id", to: "articles#show"
   get "/sign_in", to: "sessions#new"
+  get "/sign_up", to: "users#new"
   resources :users
 end
