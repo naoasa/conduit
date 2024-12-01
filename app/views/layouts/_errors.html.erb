@@ -1,0 +1,9 @@
+<%# エラーメッセージのパーシャル %>
+<% if @article.errors.any? %>
+  <ul class="error-messages">
+    <% @article.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <%# <li>That title is required</li> %>
+    <% end %>
+  </ul>
+<% end %>
